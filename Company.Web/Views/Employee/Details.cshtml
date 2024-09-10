@@ -1,0 +1,58 @@
+﻿@model EmployeeDto
+@* @{
+    ViewDate["Title"] = "Details";
+} *@
+<h1>Employee Details</h1>
+
+<br />
+<br />
+<from asp-action="Edit" asp-route-id="@Model.DepartmentId">
+    <div class="from-group">
+        <label class="col-from-lable" asp-for="Name"></label>
+
+        <input type="text" asp-for="Name" class="from-control" readonly />
+
+    </div>
+@* 
+    <div class="from-group">
+        <label class="col-from-lable" asp-for="Id"></label>
+
+        <input type="text" asp-for="Id" class="from-control" readonly />
+
+    </div> *@
+    <div class="from-group">
+        <label class="col-from-lable" asp-for="Age"></label>
+
+        <input type="text" asp-for="Age" class="from-control" readonly />
+
+    </div>
+    <div class="from-group">
+        <label class="col-from-lable" asp-for="Email"></label>
+
+        <input type="text" asp-for="Email" class="from-control" readonly />
+
+    </div>    <div class="from-group">
+        <label class="col-from-lable" asp-for="Address"></label>
+
+        <input type="text" asp-for="Address" class="from-control" readonly />
+
+    </div>    <div class="from-group">
+        <label class="col-from-lable" asp-for="HiringDate"></label>
+
+        <input type="text" asp-for="HiringDate" class="from-control" readonly />
+
+    </div>    <div class="from-group">
+        <label class="col-from-lable" asp-for="Department"></label>
+
+        <input type="text" asp-for="Department" class="from-control" readonly />
+
+    </div>    <div class="from-group">
+        <label class="col-from-lable" asp-for="DepartmentId"></label>
+
+        <input type="text" asp-for="DepartmentId" class="from-control" readonly />
+
+    </div>
+    <input type="submit" value="Edit" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</from>

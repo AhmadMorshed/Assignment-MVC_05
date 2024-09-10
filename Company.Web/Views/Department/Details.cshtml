@@ -1,0 +1,32 @@
+﻿@model DepartmentDto
+@* @{
+    ViewDate["Title"] = "Details";
+} *@
+<h1>Department Details</h1>
+
+<br />
+<br />
+<from asp-action="Edit" asp-route-id="@Model.Id">
+    <div class="from-group">
+        <label class="col-from-lable" asp-for="Code"></label>
+
+            <input type="text" asp-for="Code" class="from-control"readonly/>
+            
+    </div>
+
+    <div class="from-group">
+         <label class="col-from-lable"asp-for="Name"></label> 
+
+            <input type="text" asp-for="Name" class="from-control"readonly/>
+
+    </div>
+<div class="from-group">
+         <label class="col-from-lable"asp-for="CreateAt"></label>
+ 
+            <input type="text" asp-for="CreateAt" class="from-control"readonly/>
+
+    </div>
+    <input type="submit" value="Edit"class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</from>

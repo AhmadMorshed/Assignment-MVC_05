@@ -1,0 +1,42 @@
+﻿@model DepartmentDto
+@* @{
+    ViewDate["Title"] = "Create";
+} *@
+<h1>Create New Department</h1>
+<br />
+<br />
+
+
+        <from asp-action="Create"> @* asp-controller="Department" *@
+
+
+            <div class="from-group">
+                <label class="col-form-lable" asp-for="Code"></label>
+                <input type="text" asp-for="Code" class="from-control"/> 
+
+              @*   <span asp-validation-for="@Model.Code" class="text-danger"></span> *@
+              <br />
+            </div>
+            <div class="from-group">
+           <label class="col-form-lable" asp-for="Name"></label>
+                <input type="text" asp-for="Name" class="from-control" />
+
+              @*   <span asp-validation-for="@Model.Name" class="text-danger"></span> *@
+
+              <br />
+            </div>
+            @Html.ValidationSummary(true,"DepartmentErrors","Error while Adding Departent");
+            <br />
+
+            <input type="Submit" value="Create" class="btn btn-primary"/>
+            <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+        </from>
+
+
+
+@* @section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}
+ *@

@@ -1,0 +1,94 @@
+﻿@model EmployeeDto
+@* @{
+    ViewDate["Title"] = "Update";
+} *@
+<h1>Update Employee</h1>
+<br />
+<br />
+
+
+<from asp-action="Update">
+    @* asp-controller="Employee" *@
+
+
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="from-control" />
+
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br />
+    </div>
+    @* <div class="from-group">
+        <label class="col-form-lable" asp-for=""></label>
+        <input type="text" asp-for="Id" class="from-control" />
+
+        <span asp-validation-for="Id" class="text-danger"></span>
+
+        <br />
+    </div> *@
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Age"></label>
+        <input type="text" asp-for="Age" class="from-control" />
+
+        <span asp-validation-for="Age" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Address"></label>
+        <input type="text" asp-for="Address" class="from-control" />
+
+        <span asp-validation-for="Address" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Email"></label>
+        <input type="text" asp-for="Email" class="from-control" />
+
+        <span asp-validation-for="Email" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="Department"></label>
+        <input type="text" asp-for="Department" class="from-control" />
+
+        <span asp-validation-for="Department" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="DepartmentId"></label>
+        <input type="text" asp-for="DepartmentId" class="from-control" />
+
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="HiringDate"></label>
+        <input type="text" asp-for="HiringDate" class="from-control" />
+
+        <span asp-validation-for="HiringDate" class="text-danger"></span>
+
+        <br />
+    </div>
+    <div class="from-group">
+        <label class="col-form-lable" asp-for="ImageUrl"></label>
+        <input type="text" asp-for="ImageUrl" class="from-control" />
+
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+
+        <br />
+    </div>
+
+    @* @Html.ValidationSummary(true, "EmployeeErrors", "Error while Adding Employee"); *@
+    <br />
+
+    <input type="Submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+
+</from>
+
+
